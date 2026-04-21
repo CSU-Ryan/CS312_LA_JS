@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $(".game-cell").click(function () {
-        apply_color();
+        apply_color(this);
     });
 
 });
