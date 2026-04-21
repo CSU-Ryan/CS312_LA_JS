@@ -1,9 +1,8 @@
 let active_color = "black";
 
-function update_active_color(new_color = active_color) {
-    $(".strip-cell.selected").removeClass("selected");
-    active_color = new_color;
-    $(`.strip-cell.${active_color}`).addClass("selected");
+
+function pad(number, size) {
+    return ('0' * size + number).substring(-size);
 }
 
 function create_grid(size) {
@@ -15,7 +14,7 @@ function create_grid(size) {
 
         for (let j = 0; j < size; j++) {
             let cell = document.createElement("td");
-            cell.id = `cell${i}${j}`;
+            cell.id = `cell${pad(i,2)}${pad(j,2)}`;
             cell.className = "game-cell";
 
             row.append(cell);
@@ -29,7 +28,7 @@ function create_grid(size) {
 $(document).ready(function (){
 
     $("h1").text("Ryan Grimm");
-    $("#step-indicator").text("Step 3");
+    $("#step-indicator").text("Step 4");
 
     $("#color-strip td").each(function(){
         $(this).addClass($(this).attr("data-color"));
