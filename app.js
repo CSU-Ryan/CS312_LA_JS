@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-// Initialize Page (Step 1)
+// Initialize Page
 $("h1").text("Ryan Grimm");
-$("#step-indicator").text("Step 1");
+$("#step-indicator").text("Step 2");
 
 });
