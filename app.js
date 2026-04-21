@@ -9,7 +9,7 @@ function toggle_color(obj) {
     let class_list = cell.attr("class").split(" ");
 
     if (class_list.length >= 2) {
-        cell.remove_class().addClass("game-cell");
+        cell.removeClass().addClass("game-cell");
     } else {
         cell.addClass(active_color);
     }
