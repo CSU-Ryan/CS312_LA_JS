@@ -25,8 +25,7 @@ $(document).ready(function () {
     $(".game-cell").click(function () {
         alert_coordinate($(this).attr("id"));
         apply_color($(this));
-        $(this).removeClass();
-        $(this).addClass(`game-cell ${active_color}`);
+        $(this).removeClass().addClass(`game-cell ${active_color}`);
     });
 
 });
