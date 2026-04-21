@@ -15,10 +15,10 @@ $(document).ready(function () {
 
     $(".strip-cell").click(function () {
         update_active_color(this.attr("data-color"));
-    })
+    });
 
     $(".game-cell").click(function () {
-        alert_coordinate(this.id)
-    })
+        alert_coordinate(this.id);
+    });
 
 });
