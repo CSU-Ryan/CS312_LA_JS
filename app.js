@@ -1,7 +1,7 @@
 function update_active_color(new_color = active_color) {
     // Updates all cells to reflect new color.
     $(`.game-cell.${active_color}`)
-        .removeClass(active_color).addClass(new_color);
+        .removeClass().addClass(new_color).addClass("game-cell");
 
     // Updates color picker
     $(".strip-cell.selected").removeClass("selected");
@@ -14,10 +14,11 @@ function toggle_color(obj) {
     let cell = $(obj);
     let class_list = cell.attr("class").split(" ");
 
+    cell.removeClass();
     if (class_list.length >= 2) {
-        cell.removeClass().addClass("game-cell");
+        cell.addClass("game-cell");
     } else {
-        cell.addClass(active_color);
+        cell.addClass(`${active_color} game-cell`);
     }
 }
 
