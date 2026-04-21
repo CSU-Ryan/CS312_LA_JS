@@ -18,10 +18,10 @@ function create_grid(size) {
             cell.id = `cell${i}${j}`;
             cell.className = "game-cell";
 
-            row.appendChild(cell);
+            row.append(cell);
         }
 
-        table.appendChild(row);
+        table.append(row);
     }
 }
 
