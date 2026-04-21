@@ -17,6 +17,8 @@ $(document).ready(function () {
         update_active_color(this.attr("data-color"));
     })
 
-    $(".game-cell").click(alert_coordinate);
+    $(".game-cell").click(function () {
+        alert_coordinate(this.id)
+    })
 
 });
