@@ -12,19 +12,19 @@ function alert_coordinate(cell_coord) {
 }
 
 function apply_color(cell) {
-    $(cell).removeClass();
-    $(cell).addClass(`game-cell ${active_color}`);
+    cell.removeClass();
+    cell.addClass(`game-cell ${active_color}`);
 }
 
 $(document).ready(function () {
 
     $(".strip-cell").click(function () {
-        update_active_color(this.attr("data-color"));
+        update_active_color($(this).attr("data-color"));
     });
 
     $(".game-cell").click(function () {
         alert_coordinate($(this).attr("id"));
-        apply_color(this);
+        apply_color($(this));
     });
 
 });
