@@ -25,12 +25,10 @@ function create_grid(size) {
 }
 
 function toggle_cell(x, y) {
-    console.log(`x: '${x}' y: '${y}'`);
     if (x < 1 || y < 1 || x > 20 || y > 20) { return; }
 
     const id = `cell${pad(x,2)}${pad(y,2)}`;
 
-    console.log(id);
     apply_color(`.game-cell#${id}`);
 }
 
@@ -38,6 +36,7 @@ function toggle_cell_and_neighbors(cell) {
     let id = $(cell).attr("id");
     let x = parseInt(id.substring(4, 6));
     let y = parseInt(id.substring(6));
+    console.log(`${id} - (${x}, ${y})`)
 
     const relative_indices = [[0,0], [0,1], [1,0], [0,-1], [-1,0]];
     relative_indices.forEach((i,j) => { toggle_cell(x+i, y+j); });
