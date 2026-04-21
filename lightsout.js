@@ -25,6 +25,7 @@ function create_grid(size) {
 }
 
 function toggle_cell(x, y) {
+    console.log(`x: '${x}' y: '${y}'`);
     if (x < 1 || y < 1 || x > 20 || y > 20) { return; }
 
     const id = `cell${pad(x,2)}${pad(y,2)}`;
