@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $(".game-cell").click(function () {
-        apply_color(this);
+        toggle_cell_and_neighbors(this);
     });
 
 });
