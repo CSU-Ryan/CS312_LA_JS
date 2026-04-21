@@ -11,9 +11,9 @@ function alert_coordinate(cell_coord) {
     alert(`Row ${x}, Col ${y}`);
 }
 
-function apply_color() {
-    $(this).removeClass();
-    $(this).addClass(`game-cell ${active_color}`);
+function apply_color(cell) {
+    $(cell).removeClass();
+    $(cell).addClass(`game-cell ${active_color}`);
 }
 
 $(document).ready(function () {
@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     $(".game-cell").click(function () {
-        apply_color();
+        apply_color(this);
     });
 
 });
