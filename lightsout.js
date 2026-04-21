@@ -16,7 +16,7 @@ function create_grid(size) {
         for (let j = 0; j < size; j++) {
             let cell = document.createElement("td");
             cell.id = `cell${i}${j}`;
-            cell.addClass("game-cell");
+            cell.className = "game-cell";
 
             row.appendChild(cell);
         }
