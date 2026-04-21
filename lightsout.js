@@ -36,10 +36,9 @@ function toggle_cell_and_neighbors(cell) {
     let id = $(cell).attr("id");
     let x = parseInt(id.substring(4, 6));
     let y = parseInt(id.substring(6));
-    console.log(`${id} - (${x}, ${y})`)
 
     const relative_indices = [[0,0], [0,1], [1,0], [0,-1], [-1,0]];
-    relative_indices.forEach((i,j) => { toggle_cell(x+i, y+j); });
+    relative_indices.forEach((coord) => { toggle_cell(x+coord[0], y+coord[1]); });
 }
 
 
