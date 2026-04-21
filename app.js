@@ -6,7 +6,7 @@ function update_active_color(new_color = active_color) {
 
 function toggle_color(obj) {
     let cell = $(obj);
-    let class_list = cell.attr("class").split("/\s+/");
+    let class_list = cell.attr("class").split(" ");
 
     if (class_list.length >= 2) {
         cell.remove_class().addClass("game-cell");
