@@ -12,7 +12,8 @@ function alert_coordinate(cell_coord) {
 }
 
 function apply_color() {
-    this.classList = [active_color];
+    $(this).removeClass();
+    $(this).addClass(`game-cell ${active_color}`);
 }
 
 $(document).ready(function () {
