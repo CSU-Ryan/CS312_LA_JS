@@ -8,11 +8,11 @@ function pad(number, size) {
 function create_grid(size) {
     const table = $("#game-grid");
 
-    for (let i = 0; i < size; i++) {
+    for (let i = 1; i <= size; i++) {
         let row = document.createElement("tr");
         row.id = `row${i}`;
 
-        for (let j = 0; j < size; j++) {
+        for (let j = 1; j <= size; j++) {
             let cell = document.createElement("td");
             cell.id = `cell${pad(i,2)}${pad(j,2)}`;
             cell.className = "game-cell";
