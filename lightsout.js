@@ -29,6 +29,7 @@ function toggle_cell(x, y) {
 
     const id = `cell${pad(x,2)}${pad(y,2)}`;
 
+    console.log(id);
     apply_color(`.game-cell#${id}`);
 }
 
