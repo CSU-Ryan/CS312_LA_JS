@@ -4,8 +4,15 @@ function update_active_color(new_color = active_color) {
     $(`.strip-cell.${active_color}`).addClass("selected");
 }
 
-function apply_color(obj) {
-    $(obj).removeClass().addClass(`game-cell ${active_color}`);
+function toggle_color(obj) {
+    let cell = $(obj);
+    let class_list = cell.attr("class").split("/\s+/");
+
+    if (class_list.length >= 2) {
+        cell.remove_class().addClass("game-cell");
+    } else {
+        cell.addClass(active_color);
+    }
 }
 
 $(document).ready(function () {

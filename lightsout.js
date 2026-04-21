@@ -29,7 +29,7 @@ function toggle_cell(x, y) {
 
     const id = `cell${pad(x,2)}${pad(y,2)}`;
 
-    apply_color(`.game-cell#${id}`);
+    toggle_color(`.game-cell#${id}`);
 }
 
 function toggle_cell_and_neighbors(cell) {
@@ -45,7 +45,7 @@ function toggle_cell_and_neighbors(cell) {
 $(document).ready(function (){
 
     $("h1").text("Ryan Grimm");
-    $("#step-indicator").text("Step 6");
+    $("#step-indicator").text("Step 7");
 
     $("#color-strip td").each(function(){
         $(this).addClass($(this).attr("data-color"));
