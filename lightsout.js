@@ -2,7 +2,7 @@ let active_color = "black";
 
 
 function pad(number, size) {
-    return ('0'.repeat(size) + number).substring(-size + 1);
+    return ('0'.repeat(size) + number).slice(-size);
 }
 
 function create_grid(size) {
