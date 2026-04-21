@@ -4,6 +4,10 @@ function update_active_color(new_color = active_color) {
     $(`.strip-cell.${active_color}`).addClass("selected");
 }
 
+function apply_color() {
+    $(this).removeClass().addClass(`game-cell ${active_color}`);
+}
+
 $(document).ready(function () {
 
     $(".strip-cell").click(function () {
@@ -11,7 +15,7 @@ $(document).ready(function () {
     });
 
     $(".game-cell").click(function () {
-        $(this).removeClass().addClass(`game-cell ${active_color}`);
+        apply_color();
     });
 
 });
