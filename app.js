@@ -23,6 +23,7 @@ $(document).ready(function () {
     });
 
     $(".game-cell").click(function () {
+        alert_coordinate($(this).attr("id"));
         apply_color(this);
     });
 
