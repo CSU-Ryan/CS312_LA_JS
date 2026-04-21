@@ -33,7 +33,7 @@ function toggle_cell(x, y) {
 }
 
 function toggle_cell_and_neighbors(cell) {
-    let id = $(cell).id;
+    let id = $(cell).attr("id");
     let x = parseInt(id.substring(4, 6));
     let y = parseInt(id.substring(6));
 
