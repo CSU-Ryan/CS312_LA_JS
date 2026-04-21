@@ -28,7 +28,7 @@ function create_grid(size) {
 $(document).ready(function (){
 
     $("h1").text("Ryan Grimm");
-    $("#step-indicator").text("Step 4");
+    $("#step-indicator").text("Step 5");
 
     $("#color-strip td").each(function(){
         $(this).addClass($(this).attr("data-color"));

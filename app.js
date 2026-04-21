@@ -11,6 +11,10 @@ function alert_coordinate(cell_coord) {
     alert(`Row ${x}, Col ${y}`);
 }
 
+function apply_color() {
+    this.classList = [active_color];
+}
+
 $(document).ready(function () {
 
     $(".strip-cell").click(function () {
@@ -18,7 +22,7 @@ $(document).ready(function () {
     });
 
     $(".game-cell").click(function () {
-        alert_coordinate(this.id);
+        apply_color();
     });
 
 });
