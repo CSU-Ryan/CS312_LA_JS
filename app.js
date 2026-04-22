@@ -2,6 +2,7 @@ function update_active_color(new_color = active_color) {
     // Updates all cells to reflect new color.
     $(`.game-cell.${active_color}`)
         .removeClass(active_color).addClass(new_color);
+    $(`.game-cell.${new_color}`).css("background-color", new_color);
 
     // Updates color picker
     $(".strip-cell.selected").removeClass("selected");
@@ -16,8 +17,10 @@ function toggle_color(obj) {
 
     if (class_list.length >= 2) {
         cell.removeClass().addClass("game-cell");
+        cell.css("background-color", "");
     } else {
         cell.addClass(active_color);
+        cell.css("background-color", active_color);
     }
 }
 
